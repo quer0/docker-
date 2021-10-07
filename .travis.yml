@@ -3,7 +3,7 @@ services:
   - docker 
 
 before_install:
-  - docker build -t quer0/docker- -f Dockerfile.dev .
+  - docker build --tag quer0/docker- -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true quer0/docker-react npm run test
