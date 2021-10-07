@@ -7,3 +7,11 @@ before_install:
 
 script:
   - docker run -e CI=true quer0/dupa npm run test
+
+deploy:
+  provider: elastickbeantalk
+  region: "us-east-2"
+  app: "docker"
+  env: "Docker-env" 
+  bucket_name: "elasticbeanstalk-us-east-2-102289334398"
+  bucket_path: "docker"
